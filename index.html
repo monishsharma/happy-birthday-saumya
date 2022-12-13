@@ -45,11 +45,15 @@
         letter-spacing: 5px;
     }
 
+p {
+    display: none;
+}
  
 </style>
 
 <body>
     <div class="wrapper">
+        <p id="visits"></p>
         <div class="content">
             <h1>Happy Birthday <br /> Saumya 🎉</h1>
             <audio controls autoplay>
@@ -58,9 +62,15 @@
             </audio>
         </div>
         
+     
 
     </div>
-
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+        </script>
+        <script async src="https://api.countapi.xyz/hit/monishsharma.github.iohappy-birthday-saumya/visits?callback=cb"></script>
 </body>
 
 </html>
